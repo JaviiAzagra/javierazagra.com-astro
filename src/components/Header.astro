@@ -1,26 +1,29 @@
 ---
-import Buttons from "./Buttons.astro";
+import Bug from "src/icons/Bug.astro";
+import Github from "src/icons/Github.astro";
 ---
 
 <section
-  class="flex flex-col gap-y-4 md:flex-row justify-between py-6 max-w-[1168px] m-auto"
+  class="flex flex-col gap-y-4 md:flex-row justify-between md:px-4 py-6 max-w-[1168px] m-auto"
 >
-  <div class="flex items-center gap-x-4 px-4">
+  <div class="flex items-center gap-x-4 pl-3 md:pl-0">
     <img src="/logowhite.webp" alt="Logo" width="40px" height="auto" />
     <h1>Javier Azagra</h1>
   </div>
   <div class="flex flex-col md:flex-row gap-x-4">
-    <Buttons
-      name="GitHub"
-      bg="bg-orange"
-      color="text-black"
-      link="https://github.com/javiiazagra"
-    />
-    <Buttons
-      name="Contacto"
-      bg="bg-font"
-      color="text-black"
-      link="mailto:javiazagra12@gmail.com"
-    />
+    <a
+      class="h-full flex gap-x-1 items-center justify-center px-4 py-2 border border-orange md:rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+      href="https://github.com/JaviiAzagra"
+      target="_blank"
+      rel="norreferer"><Github /><span>GitHub</span></a
+    >
+
+    <a
+      class="inline-flex gap-x-1 items-center justify-center px-4 py-2 border border-font md:rounded-xl text-black bg-font hover:border-white hover:bg-bgcolor hover:text-white"
+      href="https://github.com/JaviiAzagra/javierazagra.com-astro/issues/new"
+      target="_blank"
+      rel="norreferer"
+      ><Bug />Bugs
+    </a>
   </div>
 </section>

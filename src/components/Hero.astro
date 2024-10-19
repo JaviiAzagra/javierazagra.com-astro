@@ -1,9 +1,11 @@
 ---
+import Linkedin from "src/icons/Linkedin.astro";
+import Contact from "src/icons/Contact.astro";
 import Skills from "./Skills.astro";
 ---
 
 <section class="pt-8 md:pt-12 flex flex-col gap-5">
-  <div class="flex items-center justify-center p-4">
+  <div class="flex items-center justify-center">
     <img
       src="/logo.jpg"
       alt="Logo"
@@ -12,20 +14,31 @@ import Skills from "./Skills.astro";
       height="auto"
     />
   </div>
-  <div class="flex flex-col items-center gap-6 p-3">
+  <div
+    class="flex flex-col items-center justify-center gap-6 p-4 max-w-[800px] m-auto"
+  >
     <h1 class="text-4xl md:text-6xl text-font">Javier Azagra</h1>
     <h2 class="text-2xl md:text-3xl text-orange">Full Stack Developer</h2>
-    <p class="max-w-[800px] text-center text-font2">
+    <p class="text-pretty text-font2">
       Programador Full Stack con especialización en desarrollo Frontend e IT. Me
       dedico a crear experiencias de usuario cautivadoras y a resolver problemas
       complejos en sistemas de información.
     </p>
-    <a
-      class="px-4 py-2 border border-orange rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
-      href="mailto:javiazagra12@gmail.com"
-      target="_blank"
-      rel="norreferer">Contacto</a
-    >
+    <div class="flex gap-x-10 items-center justify-center">
+      <a
+        class="inline-flex items-center justify-center gap-x-1 px-4 py-2 border border-orange rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+        href="mailto:javiazagra12@gmail.com"
+        target="_blank"
+        rel="norreferer"><Contact /> Contacto</a
+      >
+      <a
+        class="flex items-center justify-center gap-x-1 px-4 py-2 border border-font rounded-xl text-black bg-font hover:border-white hover:bg-bgcolor hover:text-white"
+        href="https://www.linkedin.com/in/javier-azagra-garc%C3%ADa/"
+        target="_blank"
+        rel="norreferer"><Linkedin /> Linkedin</a
+      >
+    </div>
+
     <Skills />
   </div>
 </section>

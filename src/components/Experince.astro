@@ -16,7 +16,7 @@ const works = [
   },
   {
     title: "IT Technician",
-    company: "Alten Esp",
+    company: "Alten",
     date: "MAY - JUNE 2023",
     description:
       "Mi trabajo consistía en resolver problemas informáticos relacionados con el software tanto para nuestra empresa como para los clientes a los que servíamos. También tenía habilidades en Microsoft Office.",
@@ -28,11 +28,11 @@ const works = [
   <div>
     <h2 class="text-5xl">Experiencia</h2>
   </div>
-  <div class="flex flex-col gap-11 max-w-[800px] p-3">
+  <div class="flex flex-col gap-11 max-w-[800px] p-4">
     {
       works.map((work) => (
         <div class="flex flex-col gap-6">
-          <div class="flex justify-between items-center">
+          <div class="flex flex-col gap-y-2 md:flex-row md-items-center md:justify-between ">
             <h3 class="text-xl">
               {work.title} /
               <span class="text-base text-orange"> {work.company}</span>
