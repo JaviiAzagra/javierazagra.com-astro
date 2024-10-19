@@ -1,0 +1,112 @@
+---
+const projects = [
+  {
+    title: "PortTales - En construcción",
+    description:
+      "Ofrezco servicios de creación de sitios web de una sola página utilizando Astro, una herramienta que permite desarrollar páginas rápidas y optimizadas. Me enfoco en diseñar experiencias atractivas y funcionales que ayuden a las empresas a destacar en línea y conectar con su audiencia.",
+    image: "/projects/porttales.webp",
+    link: "https://porttales.vercel.app",
+    github: "https://github.com/JaviiAzagra/porttales",
+    utilities: ["Astro", "TailwindCSS"],
+  },
+  {
+    title: "TK Keyboards",
+    description:
+      "Este proyecto consiste en el desarrollo de una página web interactiva dedicada a la venta de teclados mecánicos. La web permite a los usuarios explorar una amplia gama de productos, visualizar detalles técnicos y realizar compras de manera intuitiva.",
+    image: "/projects/tkkeyboards.webp",
+    link: "https://tk-keyboards.vercel.app/",
+    github: "https://github.com/JaviiAzagra/Tk-Keyboards",
+    utilities: ["React", "Node.js", "Express", "MongoDB"],
+  },
+  {
+    title: "Mestre Cabreta",
+    description:
+      "He desarrollado una plataforma de educación en línea multilingüe para un cliente, que ofrece artículos e información accesibles en varios idiomas. Los usuarios pueden iniciar sesión para dejar comentarios y compartir sus opiniones sobre el contenido. ",
+    image: "/projects/mestrecabreta.webp",
+    link: "https://www.mestrecabreta.com",
+    utilities: ["React", "Node.js", "Express", "MongoDB"],
+  },
+  {
+    title: "TkCoder",
+    description:
+      "He creado una plataforma web dedicada a ofrecer tutoriales y artículos informativos para desarrolladores. Esta web tiene como objetivo proporcionar recursos accesibles que ayuden a los usuarios a mejorar sus habilidades técnicas y a mantenerse actualizados con las tendencias del sector.",
+    image: "/projects/tkcoder.webp",
+    link: "https://tkcoder.vercel.app/",
+    github: "https://github.com/JaviiAzagra/tkcoder.dev",
+    utilities: ["React"],
+  },
+];
+
+const colorMap: { [key: string]: string } = {
+  React: "bg-blue-500",
+  "Node.js": "bg-green-500",
+  Express: "bg-gray-500",
+  MongoDB: "bg-green-800",
+  Astro: "bg-purple-500",
+  TailwindCSS: "bg-[#013158]",
+};
+---
+
+<section class="flex flex-col items-center justify-center gap-y-12 pt-20">
+  <div>
+    <h2 class="text-5xl">Proyectos</h2>
+  </div>
+  <div class="grid grid-cols-1 gap-y-11 max-w-[800px] p-3">
+    {
+      projects.map((project) => (
+        <div class="flex flex-col gap-10 md:flex-row items-center ">
+          <div>
+            <img
+              class="rounded-xl max-w-[380px]"
+              src={project.image}
+              alt={project.title}
+            />
+          </div>
+          <div class="h-full flex flex-col gap-5 justify-between ">
+            <h3 class="text-xl">{project.title}</h3>
+            <div class="flex gap-2">
+              {project.utilities.map((util: string) => (
+                <span
+                  class={`text-xs text-white px-3 py-1 rounded-xl ${
+                    colorMap[util] || "bg-gray-400"
+                  }`}
+                >
+                  {util}
+                </span>
+              ))}
+            </div>
+            <p class="text-sm text-font2">{project.description}</p>
+            <div class="flex gap-4">
+              <a
+                class="text-xs px-4 py-2 border border-orange rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+                href={project.link}
+                target="_blank"
+                rel="norreferer"
+              >
+                Preview
+              </a>
+              {project.github && (
+                <a
+                  class="text-xs px-4 py-2 border border-orange rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+                  href={project.github}
+                  target="_blank"
+                  rel="norreferer"
+                >
+                  GitHub
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div>
+    <a
+      class="text-font underline text-start w-full hover:text-orange"
+      href="https://github.com/JaviiAzagra?tab=repositories"
+      target="_blank"
+      rel="norreferer">Ver mas</a
+    >
+  </div>
+</section>
