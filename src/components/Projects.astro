@@ -1,9 +1,15 @@
 ---
+import { getI18N } from "@i18n/index";
+import Github from "@icons/Github.astro";
+import Preview from "@icons/Preview.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
 const projects = [
   {
     title: "PortTales - En construcción",
-    description:
-      "Ofrezco servicios de creación de sitios web de una sola página utilizando Astro, una herramienta que permite desarrollar páginas rápidas y optimizadas. Me enfoco en diseñar experiencias atractivas y funcionales que ayuden a las empresas a destacar en línea y conectar con su audiencia.",
+    description: i18n.projects.description_1,
     image: "/projects/porttales.webp",
     link: "https://porttales.vercel.app",
     github: "https://github.com/JaviiAzagra/porttales",
@@ -11,8 +17,7 @@ const projects = [
   },
   {
     title: "TK Keyboards",
-    description:
-      "Este proyecto consiste en el desarrollo de una página web interactiva dedicada a la venta de teclados mecánicos. La web permite a los usuarios explorar una amplia gama de productos, visualizar detalles técnicos y realizar compras de manera intuitiva.",
+    description: i18n.projects.description_2,
     image: "/projects/tkkeyboards.webp",
     link: "https://tk-keyboards.vercel.app/",
     github: "https://github.com/JaviiAzagra/Tk-Keyboards",
@@ -20,16 +25,14 @@ const projects = [
   },
   {
     title: "Mestre Cabreta",
-    description:
-      "He desarrollado una plataforma de educación en línea multilingüe para un cliente, que ofrece artículos e información accesibles en varios idiomas. Los usuarios pueden iniciar sesión para dejar comentarios y compartir sus opiniones sobre el contenido. ",
+    description: i18n.projects.description_3,
     image: "/projects/mestrecabreta.webp",
     link: "https://www.mestrecabreta.com",
     utilities: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
     title: "TkCoder",
-    description:
-      "He creado una plataforma web dedicada a ofrecer tutoriales y artículos informativos para desarrolladores. Esta web tiene como objetivo proporcionar recursos accesibles que ayuden a los usuarios a mejorar sus habilidades técnicas y a mantenerse actualizados con las tendencias del sector.",
+    description: i18n.projects.description_4,
     image: "/projects/tkcoder.webp",
     link: "https://tkcoder.vercel.app/",
     github: "https://github.com/JaviiAzagra/tkcoder.dev",
@@ -49,7 +52,7 @@ const colorMap: { [key: string]: string } = {
 
 <section class="flex flex-col items-center justify-center gap-y-12 pt-20">
   <div>
-    <h2 class="text-5xl">Proyectos</h2>
+    <h2 class="text-5xl">{i18n.projects.title}</h2>
   </div>
   <div class="grid grid-cols-1 gap-y-11 max-w-[800px] p-3">
     {
@@ -83,25 +86,7 @@ const colorMap: { [key: string]: string } = {
                 target="_blank"
                 rel="norreferer"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-link"
-                >
-                  <>
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M9 15l6 -6" />
-                    <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                    <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-                  </>
-                </svg>
+                <Preview />
                 Preview
               </a>
               {project.github && (
@@ -111,21 +96,7 @@ const colorMap: { [key: string]: string } = {
                   target="_blank"
                   rel="norreferer"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                  </svg>
+                  <Github />
                   GitHub
                 </a>
               )}
@@ -140,7 +111,7 @@ const colorMap: { [key: string]: string } = {
       class="text-font underline text-start w-full hover:text-orange"
       href="https://github.com/JaviiAzagra?tab=repositories"
       target="_blank"
-      rel="norreferer">Ver mas</a
+      rel="norreferer">{i18n.projects.viewMore}</a
     >
   </div>
 </section>
