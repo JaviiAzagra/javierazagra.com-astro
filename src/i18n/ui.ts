@@ -1,5 +1,6 @@
 import SpainFlag from '@icons/Spain.astro';
 import UnitedStatesFlag from '@icons/UnitedStates.astro';
+import GermanyFlag from '@icons/Germany.astro';
 
 
 export const LANGUAGES: Record<
@@ -13,8 +14,13 @@ export const LANGUAGES: Record<
 	},
 	es: {
 		code: 'es',
-		name: 'Español',
+		name: 'Spanish',
 		flag: SpainFlag,
+	},
+	de: {
+		code: 'de',
+		name: 'Germany',
+		flag: GermanyFlag,
 	},
 };
 
@@ -40,6 +46,15 @@ export const ui = {
 		'nav.privacidad': 'Privacy',
 		'nav.cookies': 'Cookies',
 	},
+	de: {
+		'nav.inicio': 'Inicio',
+		'nav.vota': 'Vota',
+		'nav.info': 'Información',
+		'nav.archivo': 'Archivo',
+		'nav.legal': 'Aviso Legal',
+		'nav.privacidad': 'Privacidad',
+		'nav.cookies': 'Cookies',
+	},
 } as const;
 
 export const routes = {
@@ -52,6 +67,14 @@ export const routes = {
 		cookies: 'cookies',
 	},
 	en: {
+		vota: 'vote',
+		info: 'information',
+		archivo: 'archive',
+		'aviso-legal': 'legal-notice',
+		privacidad: 'privacy',
+		cookies: 'cookies',
+	},
+	de: {
 		vota: 'vote',
 		info: 'information',
 		archivo: 'archive',

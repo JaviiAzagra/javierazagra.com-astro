@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "about": "Full Stack Entwickler mit Spezialisierung auf Frontend-Entwicklung und IT. Ich konzentriere mich darauf, fesselnde Benutzererlebnisse zu schaffen und komplexe Probleme in Informationssystemen zu lösen.",
+    "contact": "Kontakt"
+  },
+  "aboutme": {
+    "title": "Über Mich",
+    "description_1": "Ich bin ein Full Stack Entwickler mit einem besonderen Fokus auf die Frontend-Entwicklung. Ich habe eine Leidenschaft dafür, moderne, dynamische und ansprechende Oberflächen zu gestalten, die sich auf Benutzererfahrung und die Effizienz von Webanwendungen konzentrieren. Obwohl meine Stärke im Frontend liegt, habe ich auch Erfahrung im Backend und solide Kenntnisse in verschiedenen Bereichen der IT, was mir eine ganzheitliche Sicht auf Systeme ermöglicht und mich in die Lage versetzt, umfassende technische Lösungen zu bieten.",
+    "description_2": "Technologie war schon immer ein Teil meines Lebens, und ich liebe es, mich über die neuesten Fortschritte in der Informatik und Entwicklung zu informieren. Für mich ist Programmieren nicht nur ein Job, sondern eine Möglichkeit, Ideen in digitale Realitäten zu verwandeln.",
+    "description_3": "Wenn ich nicht gerade code, findet man mich oft bei zwei meiner großen Leidenschaften: Techno-Musik und Autos. Elektronische Musik inspiriert und treibt meine Kreativität an, während mich die Automobilwelt fasziniert, sei es, neue Automodelle zu erkunden oder das Fahren zu genießen."
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "description_1": "Als freiberuflicher Full Stack Entwickler habe ich Erfahrung in der Frontend- und Backend-Entwicklung, was es mir ermöglicht, umfassende Weblösungen anzubieten. Von der Gestaltung der Benutzeroberfläche bis hin zur Optimierung der Serverleistung biete ich hochwertige, maßgeschneiderte Lösungen, die zum Geschäftserfolg beitragen.",
+    "description_2": "Ich habe an der Behebung von IT-Problemen gearbeitet und sowohl Drucker als auch Computer konfiguriert. Zusätzlich habe ich an der Organisation von Druckern und deren Netzwerkkonfigurationen mitgewirkt.",
+    "description_3": "Meine Aufgabe war es, softwarebezogene IT-Probleme sowohl für unser Unternehmen als auch für unsere Kunden zu lösen. Außerdem hatte ich Kenntnisse in Microsoft Office."
+  },
+  "projects": {
+    "title": "Projekte",
+    "description_1": "Ich biete Dienstleistungen zur Erstellung von einseitigen Websites mit Astro an, einem Tool, das die Entwicklung schneller und optimierter Seiten ermöglicht. Ich konzentriere mich auf die Gestaltung ansprechender und funktionaler Erlebnisse, die Unternehmen dabei helfen, sich online abzuheben und mit ihrem Publikum in Kontakt zu treten.",
+    "description_2": "Dieses Projekt besteht in der Entwicklung einer interaktiven Website, die dem Verkauf von mechanischen Tastaturen gewidmet ist. Die Seite ermöglicht es den Nutzern, eine breite Palette von Produkten zu erkunden, technische Details einzusehen und intuitive Käufe zu tätigen.",
+    "description_3": "Ich habe für einen Kunden eine mehrsprachige Online-Bildungsplattform entwickelt, die zugängliche Artikel und Informationen in mehreren Sprachen anbietet. Benutzer können sich anmelden, um Kommentare zu hinterlassen und ihre Meinungen zu den Inhalten zu teilen.",
+    "description_4": "Ich habe eine Webplattform erstellt, die Tutorials und informative Artikel für Entwickler anbietet. Diese Website zielt darauf ab, zugängliche Ressourcen bereitzustellen, die den Benutzern helfen, ihre technischen Fähigkeiten zu verbessern und mit den Branchentrends Schritt zu halten.",
+    "construction": "Im Bau",
+    "viewMore": "Mehr Anzeigen"
+  }
+}

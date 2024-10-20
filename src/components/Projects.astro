@@ -60,7 +60,7 @@ const colorMap: { [key: string]: string } = {
         <div class="flex flex-col gap-10 md:flex-row items-center ">
           <div>
             <img
-              class=" rounded-xl max-w-[355px] md:max-w-[380px]"
+              class=" rounded-md max-w-[355px] md:max-w-[380px]"
               src={project.image}
               alt={project.title}
             />
@@ -70,7 +70,7 @@ const colorMap: { [key: string]: string } = {
             <div class="flex gap-2">
               {project.utilities.map((util: string) => (
                 <span
-                  class={`text-xs  px-3 py-1 rounded-xl ${
+                  class={`text-xs  px-3 py-1 rounded-md ${
                     colorMap[util] || "bg-orange"
                   } `}
                 >
@@ -81,7 +81,7 @@ const colorMap: { [key: string]: string } = {
             <p class="text-sm text-font2">{project.description}</p>
             <div class="flex gap-4">
               <a
-                class="flex items-center gap-x-1 text-xs px-4 py-2 border border-orange rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+                class="flex items-center gap-x-1 text-black text-xs px-3 py-2 border border-white rounded-md  bg-white hover:border-white hover:bg-bgcolor hover:text-white"
                 href={project.link}
                 target="_blank"
                 rel="norreferer"
@@ -91,7 +91,7 @@ const colorMap: { [key: string]: string } = {
               </a>
               {project.github && (
                 <a
-                  class="flex items-center gap-x-1 text-xs px-4 py-2 border border-orange rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+                  class="flex items-center gap-x-1 text-black text-xs px-3 py-2 border border-white rounded-md  bg-white hover:border-white hover:bg-bgcolor hover:text-white"
                   href={project.github}
                   target="_blank"
                   rel="norreferer"
