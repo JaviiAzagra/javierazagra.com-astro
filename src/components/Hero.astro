@@ -2,6 +2,11 @@
 import Linkedin from "src/icons/Linkedin.astro";
 import Contact from "src/icons/Contact.astro";
 import Skills from "./Skills.astro";
+
+import { getI18N } from "@i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <section class="pt-8 md:pt-12 flex flex-col gap-5">
@@ -22,16 +27,14 @@ import Skills from "./Skills.astro";
     </h1>
     <h2 class="text-2xl md:text-3xl text-orange">Full Stack Developer</h2>
     <p class="text-pretty text-font2">
-      Programador Full Stack con especialización en desarrollo Frontend e IT. Me
-      dedico a crear experiencias de usuario cautivadoras y a resolver problemas
-      complejos en sistemas de información.
+      {i18n.hero.about}
     </p>
     <div class="flex gap-x-10 items-center justify-center">
       <a
         class="inline-flex items-center justify-center gap-x-1 px-4 py-2 border border-orange rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
         href="mailto:javiazagra12@gmail.com"
         target="_blank"
-        rel="norreferer"><Contact /> Contacto</a
+        rel="norreferer"><Contact /> {i18n.hero.contact}</a
       >
       <a
         class="flex items-center justify-center gap-x-1 px-4 py-2 border border-font rounded-xl text-black bg-font hover:border-white hover:bg-bgcolor hover:text-white"

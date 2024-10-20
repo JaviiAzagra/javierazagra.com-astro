@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "about": "Full Stack Developer specializing in Frontend development and IT. I focus on creating captivating user experiences and solving complex problems in information systems.",
+    "contact": "Contact"
+  },
+  "aboutme": {
+    "title": "About Me",
+    "description_1": "I am a Full Stack Developer with a special focus on Frontend development. I am passionate about creating modern, dynamic, and attractive interfaces, focusing on user experience and web application efficiency. While my strength lies in Frontend, I also have experience in Backend and a solid knowledge in various areas of IT, allowing me to have a global vision of systems and provide comprehensive technical solutions.",
+    "description_2": "Technology has always been a part of my life, and I love learning about the latest advancements in computing and development. For me, programming is not just a job, but a way to transform ideas into digital realities.",
+    "description_3": "When I'm not coding, you'll find me enjoying two of my great passions: techno music and cars. Electronic music inspires and drives my creativity, while the automotive world fascinates me, whether it's exploring new car models or enjoying driving."
+  },
+  "experience": {
+    "title": "Experience",
+    "description_1": "As a freelance full stack developer, I have experience in both front-end and back-end development, allowing me to offer comprehensive web solutions. From user interface design to server performance optimization, I provide high-quality, customized solutions that drive business success.",
+    "description_2": "I worked on troubleshooting IT issues and configuring both printers and computers. Additionally, I participated in organizing printers and their network configurations.",
+    "description_3": "My job was to solve software-related IT problems for both our company and the clients we served. I also had skills in Microsoft Office."
+  },
+  "projects": {
+    "title": "Projects",
+    "description_1": "I offer single-page website creation services using Astro, a tool that allows for the development of fast and optimized pages. I focus on designing engaging and functional experiences that help businesses stand out online and connect with their audience.",
+    "description_2": "This project consists of developing an interactive website dedicated to the sale of mechanical keyboards. The site allows users to explore a wide range of products, view technical details, and make intuitive purchases.",
+    "description_3": "I developed a multilingual online education platform for a client, offering accessible articles and information in multiple languages. Users can log in to leave comments and share their opinions on the content.",
+    "description_4": "I created a web platform dedicated to offering tutorials and informative articles for developers. This website aims to provide accessible resources that help users improve their technical skills and stay up to date with industry trends.",
+    "construction": "Under Construction",
+    "viewMore": "View More"
+  }
+}

@@ -1,7 +1,22 @@
 ---
 import Bug from "src/icons/Bug.astro";
 import Github from "src/icons/Github.astro";
-import ThemeIcon from "src/icons/ThemeIcon.astro";
+
+import LanguageSelector from "@components/LanguageSelector.astro";
+
+import { getI18N } from "@i18n/index";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <section
@@ -11,20 +26,23 @@ import ThemeIcon from "src/icons/ThemeIcon.astro";
     <img src="/logowhite.webp" alt="Logo" width="40px" height="auto" />
     <h1>Javier Azagra</h1>
   </div>
-  <div class="flex flex-col md:flex-row gap-x-4">
+  <div class="flex flex-col md:flex-row md:items-center gap-x-4">
     <a
       class="h-full flex gap-x-1 items-center justify-center px-4 py-2 border border-orange md:rounded-xl text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
       href="https://github.com/JaviiAzagra"
       target="_blank"
-      rel="norreferer"><Github /><span>GitHub</span></a
-    >
-
+      rel="norreferer"
+      ><Github />
+      <span>GitHub</span>
+    </a>
     <a
-      class="inline-flex gap-x-1 items-center justify-center px-4 py-2 border border-font md:rounded-xl text-black bg-font hover:border-white hover:bg-bgcolor hover:text-white"
+      class="flex gap-x-1 items-center justify-center px-4 py-2 border border-font md:rounded-xl text-black bg-font hover:border-white hover:bg-bgcolor hover:text-white"
       href="https://github.com/JaviiAzagra/javierazagra.com-astro/issues/new"
       target="_blank"
       rel="norreferer"
-      ><Bug />Bugs
+      ><Bug />
+      <span>Bugs</span>
     </a>
+    <LanguageSelector />
   </div>
 </section>
