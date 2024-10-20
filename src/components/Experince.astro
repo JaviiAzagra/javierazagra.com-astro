@@ -8,19 +8,19 @@ const works = [
   {
     title: "Full Stack Developer",
     company: "Freelancer",
-    date: "2023 - Present",
+    date: `2023 - ${i18n.months.present}`,
     description: i18n.experience.description_1,
   },
   {
     title: "IT Technician",
     company: "Primavera Sound",
-    date: "MAY - JUNE 2023",
+    date: ` ${i18n.months.may} - ${i18n.months.june} 2023`,
     description: i18n.experience.description_2,
   },
   {
     title: "IT Technician",
     company: "Alten",
-    date: "MAY - JUNE 2023",
+    date: ` ${i18n.months.april} - ${i18n.months.june} 2021`,
     description: i18n.experience.description_3,
   },
 ];
@@ -30,7 +30,7 @@ const works = [
   <div>
     <h2 class="text-5xl">{i18n.experience.title}</h2>
   </div>
-  <div class="flex flex-col gap-11 max-w-[800px] p-4">
+  <div class="flex flex-col gap-11 max-w-[900px] p-4">
     {
       works.map((work) => (
         <div class="flex flex-col gap-6">
@@ -39,7 +39,7 @@ const works = [
               {work.title} /
               <span class="text-base text-orange"> {work.company}</span>
             </h3>
-            <p class="text-font2 text-sm font-light">{work.date}</p>
+            <p class="text-font2 text-sm font-light uppercase">{work.date}</p>
           </div>
           <div>
             <p class="text-font2 text-base">{work.description}</p>

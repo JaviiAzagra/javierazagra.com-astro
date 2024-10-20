@@ -23,5 +23,21 @@
     "description_4": "He creado una plataforma web dedicada a ofrecer tutoriales y artículos informativos para desarrolladores. Esta web tiene como objetivo proporcionar recursos accesibles que ayuden a los usuarios a mejorar sus habilidades técnicas y a mantenerse actualizados con las tendencias del sector.",
     "construction": "En construcción",
     "viewMore": "Ver Mas"
+  },
+
+  "months": {
+    "january": "Enero",
+    "february": "Febrero",
+    "march": "Marzo",
+    "april": "Abril",
+    "may": "Mayo",
+    "june": "Junio",
+    "july": "Julio",
+    "august": "Agosto",
+    "september": "Septiembre",
+    "october": "Octubre",
+    "november": "Noviembre",
+    "december": "Diciembre",
+    "present": "Presente"
   }
 }

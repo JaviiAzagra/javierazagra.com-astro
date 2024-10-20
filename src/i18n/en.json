@@ -23,5 +23,20 @@
     "description_4": "I created a web platform dedicated to offering tutorials and informative articles for developers. This website aims to provide accessible resources that help users improve their technical skills and stay up to date with industry trends.",
     "construction": "Under Construction",
     "viewMore": "View More"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+    "present": "Present"
   }
 }

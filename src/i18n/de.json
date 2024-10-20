@@ -23,5 +23,21 @@
     "description_4": "Ich habe eine Webplattform erstellt, die Tutorials und informative Artikel für Entwickler anbietet. Diese Website zielt darauf ab, zugängliche Ressourcen bereitzustellen, die den Benutzern helfen, ihre technischen Fähigkeiten zu verbessern und mit den Branchentrends Schritt zu halten.",
     "construction": "Im Bau",
     "viewMore": "Mehr Anzeigen"
+  },
+
+  "months": {
+    "january": "Januar",
+    "february": "Februar",
+    "march": "März",
+    "april": "April",
+    "may": "Mai",
+    "june": "Juni",
+    "july": "Juli",
+    "august": "August",
+    "september": "September",
+    "october": "Oktober",
+    "november": "November",
+    "december": "Dezember",
+    "present": "Gegenwart"
   }
 }
