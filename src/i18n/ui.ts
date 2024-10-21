@@ -14,7 +14,7 @@ export const LANGUAGES: Record<
 	},
 	es: {
 		code: 'es',
-		name: 'Spanish',
+		name: 'Español',
 		flag: SpainFlag,
 	},
 	de: {
