@@ -10,6 +10,9 @@ Este es mi portafolio personal, construido con [Astro](https://astro.build), un 
 </div>
 
 ## 🚀 Características
+![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=fff&style=flat)
 
 - **Astro**: Framework moderno que genera sitios estáticos ultrarrápidos.
 - **i18n (Internacionalización)**: El sitio soporta tres idiomas: español, inglés y alemán. Los usuarios pueden cambiar fácilmente el idioma desde la interfaz del sitio.
