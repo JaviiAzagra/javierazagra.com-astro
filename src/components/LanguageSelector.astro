@@ -1,6 +1,7 @@
 ---
 import { LANGUAGES } from "../i18n/ui";
 import ChevronIcon from "@icons/Chevron.astro";
+import LngIcon from "@icons/Lng.astro";
 
 import {
   getRouteFromUrl,
@@ -22,7 +23,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
   <div class="group text-white font-semibold transition-all">
     <button
       type="button"
-      class="text-black border border-white inline-flex justify-center items-center w-full gap-x-2 px-4 py-2 bg-white hover:bg-bgcolor hover:border-white hover:text-font md:rounded-md"
+      class="text-sm text-black border border-white inline-flex justify-center items-center w-full gap-x-2 px-4 py-2 bg-white hover:bg-bgcolor hover:border-white hover:text-font md:rounded-md"
       aria-expanded="true"
       aria-haspopup="true"
     >
@@ -37,7 +38,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
         otherLocales.map((locale) => (
           <li class="py-[2px]">
             <a
-              class="text-black rounded-md border bg-white whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2 hover:bg-bgcolor hover:border-white hover:text-font"
+              class="text-sm text-black rounded-md border bg-white whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2 hover:bg-bgcolor hover:border-white hover:text-font"
               href={translatePath(`/${route ? route : ""}`, locale.code)}
             >
               <locale.flag />

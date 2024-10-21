@@ -1,8 +1,8 @@
 ---
 import Bug from "src/icons/Bug.astro";
 import Github from "src/icons/Github.astro";
-
 import LanguageSelector from "@components/LanguageSelector.astro";
+import Close from "@icons/Close.astro";
 
 import { getI18N } from "@i18n/index";
 import {
@@ -10,6 +10,7 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "../i18n/utils";
+import Hamburguer from "@icons/Hamburguer.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -20,13 +21,43 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <section
-  class="flex flex-col gap-y-4 md:flex-row justify-between md:px-4 py-6 max-w-[1168px] m-auto"
+  class="text-sm flex flex-col gap-y-4 md:flex-row justify-between md:px-4 py-6 max-w-[1168px] m-auto"
 >
-  <div class="flex items-center gap-x-4 pl-3 md:pl-0">
-    <img src="/assets/logowhite.webp" alt="Logo" width="40px" height="auto" />
-    <h1>Javier Azagra</h1>
+  <div class="flex items-center justify-between gap-x-4 px-6 md:px-0">
+    <div class="flex items-center gap-x-2">
+      <img src="/assets/logowhite.webp" alt="Logo" width="40px" height="auto" />
+      <h1 class="mt-1">Javier Azagra</h1>
+    </div>
+    <div class="md:hidden" id="hamburguerIcon">
+      <Hamburguer />
+    </div>
+    <div id="closeIcon" class="hidden">
+      <Close />
+    </div>
   </div>
-  <div class="flex flex-col md:flex-row md:items-center gap-x-4">
+
+  <!-- Menú visible en pantallas grandes -->
+  <div class="hidden md:flex flex-col md:flex-row md:items-center md:gap-x-4">
+    <a
+      class="h-full flex gap-x-1 items-center justify-center px-4 py-2 border border-font md:rounded-md text-black bg-font hover:border-white hover:bg-bgcolor hover:text-white"
+      href="https://github.com/JaviiAzagra"
+      target="_blank"
+      rel="norreferer"
+      ><Github />
+      <span>GitHub</span>
+    </a>
+    <a
+      class="flex gap-x-1 items-center justify-center px-4 py-2 border border-orange md:rounded-md text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+      href="https://github.com/JaviiAzagra/javierazagra.com-astro/issues/new"
+      target="_blank"
+      rel="norreferer"
+      ><Bug />
+      <span>Bugs</span>
+    </a>
+    <LanguageSelector />
+  </div>
+
+  <div id="mobileMenu" class="hidden flex-col md:hidden">
     <a
       class="h-full flex gap-x-1 items-center justify-center px-4 py-2 border border-font md:rounded-md text-black bg-font hover:border-white hover:bg-bgcolor hover:text-white"
       href="https://github.com/JaviiAzagra"
@@ -46,3 +77,30 @@ const translatePath = useTranslatedPath(lang);
     <LanguageSelector />
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburguerIcon = document.getElementById("hamburguerIcon");
+    const closeIcon = document.getElementById("closeIcon");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (hamburguerIcon && closeIcon && mobileMenu) {
+      hamburguerIcon.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        hamburguerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      closeIcon.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        // Alternar de vuelta a hamburguesa
+        hamburguerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
