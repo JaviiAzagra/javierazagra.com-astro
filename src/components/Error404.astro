@@ -1,10 +1,7 @@
 ---
-// Error404.astro
-
 import { getI18N } from "@i18n/index";
 import { useTranslatedPath } from "../i18n/utils";
 
-// Recibe 'lang' como prop
 const { lang } = Astro.props;
 const i18n = getI18N({ currentLocale: lang });
 
