@@ -9,7 +9,7 @@
 ## Javier Azagra García
 
 <div align="center">
-  <img src="./public/assets/readmeimg.png" >
+  <img src="./public/assets/readmeimage.png" >
 </div>
 
 
