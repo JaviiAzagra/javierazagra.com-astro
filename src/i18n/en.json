@@ -38,5 +38,10 @@
     "november": "November",
     "december": "December",
     "present": "Present"
+  },
+
+  "error": {
+    "title": "Page Not Found",
+    "button": "Back to Home Page"
   }
 }

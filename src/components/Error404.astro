@@ -1,0 +1,23 @@
+---
+// Error404.astro
+
+import { getI18N } from "@i18n/index";
+import { useTranslatedPath } from "../i18n/utils";
+
+// Recibe 'lang' como prop
+const { lang } = Astro.props;
+const i18n = getI18N({ currentLocale: lang });
+
+const translatePath = useTranslatedPath(lang);
+---
+
+<section class="flex flex-col justify-center items-center h-screen">
+  <h1 class="text-7xl md:text-9xl">404</h1>
+  <p class="pb-10 text-font2">{i18n.error.title}</p>
+  <a
+    href={translatePath("/")}
+    class="flex gap-x-1 items-center justify-center px-4 py-2 border border-orange md:rounded-md text-black bg-orange hover:border-white hover:bg-bgcolor hover:text-white"
+  >
+    {i18n.error.button}
+  </a>
+</section>

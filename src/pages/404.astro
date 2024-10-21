@@ -1,0 +1,14 @@
+---
+import { getI18N } from "@i18n/index";
+import Error404Layout from "@layouts/Error404Layout.astro";
+import Error404 from "@components/Error404.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+// Obtén el idioma de la URL usando getLangFromUrl
+const lang = getLangFromUrl(Astro.url);
+const i18n = getI18N({ currentLocale: lang });
+---
+
+<Error404Layout title={`404 - ${i18n.error.title}`}>
+  <Error404 lang={lang} />
+</Error404Layout>

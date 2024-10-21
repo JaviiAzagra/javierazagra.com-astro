@@ -39,5 +39,10 @@
     "november": "Noviembre",
     "december": "Diciembre",
     "present": "Presente"
+  },
+
+  "error": {
+    "title": "Página no encontrada",
+    "button": "Volver a la página de inicio"
   }
 }
