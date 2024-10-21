@@ -4,7 +4,7 @@
 ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=fff&style=flat)
 
-<img src="./public/favicon.svg" alt="logo" width="300px">
+<img src="./public/favicon.svg" alt="logo" width="250px">
   
 ## Javier Azagra García
 
