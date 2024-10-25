@@ -1,18 +1,82 @@
+---
+const skills = [
+  {
+    name: "HTML",
+    icon: "/icons/html.png",
+  },
+  {
+    name: "CSS",
+    icon: "/icons/css.png",
+  },
+  {
+    name: "JavaScript",
+    icon: "/icons/js.png",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "/icons/tailwind.png",
+  },
+  {
+    name: "Sass",
+    icon: "/icons/sass.png",
+  },
+  {
+    name: "Astro",
+    icon: "/icons/astro.png",
+  },
+  {
+    name: "React",
+    icon: "/icons/react.webp",
+  },
+  {
+    name: "Next.js",
+    icon: "/icons/nextjs.png",
+  },
+  {
+    name: "Angular",
+    icon: "/icons/angularjs.png",
+  },
+  {
+    name: "SQL",
+    icon: "/icons/sql.png",
+  },
+  {
+    name: "MongoDB",
+    icon: "/icons/mongo.png",
+  },
+  {
+    name: "Node.js",
+    icon: "/icons/node.png",
+  },
+  {
+    name: "Linux",
+    icon: "/icons/linux.png",
+  },
+  {
+    name: "VS Code",
+    icon: "/icons/vscode.png",
+  },
+  {
+    name: "Git",
+    icon: "/icons/git.png",
+  },
+  {
+    name: "Office",
+    icon: "/icons/office.png",
+  },
+  {
+    name: "Figma",
+    icon: "/icons/figma.png",
+  },
+];
+---
+
 <section class="grid grid-cols-4 md:grid-cols-8 gap-10 pt-10">
-  <img src="/icons/html.png" alt="html" width="40px" height="auto" />
-  <img src="/icons/css.png" alt="css" width="40px" height="auto" />
-  <img src="/icons/js.png" alt="js" width="40px" height="auto" />
-  <img src="/icons/tailwind.png" alt="tailwind" width="40px" height="auto" />
-  <img src="/icons/sass.png" alt="sass" width="40px" height="auto" />
-  <img src="/icons/astro.png" alt="astro" width="40px" height="auto" />
-  <img src="/icons/react.webp" alt="react" width="40px" height="auto" />
-  <img src="/icons/angularjs.png" alt="angular" width="40px" height="auto" />
-  <img src="/icons/sql.png" alt="sql" width="40px" height="auto" />
-  <img src="/icons/mongo.png" alt="mongodb" width="40px" height="auto" />
-  <img src="/icons/node.png" alt="node" width="40px" height="auto" />
-  <img src="/icons/linux.png" alt="linux" width="40px" height="auto" />
-  <img src="/icons/vscode.png" alt="vscode" width="40px" height="auto" />
-  <img src="/icons/git.png" alt="git" width="40px" height="auto" />
-  <img src="/icons/office.png" alt="office" width="40px" height="auto" />
-  <img src="/icons/figma.png" alt="figma" width="40px" height="auto" />
+  {
+    skills.map((skill) => (
+      <div>
+        <img src={skill.icon} alt={skill.name} width="40px" height="40px" />
+      </div>
+    ))
+  }
 </section>
