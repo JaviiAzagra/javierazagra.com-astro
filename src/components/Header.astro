@@ -20,6 +20,32 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburguerIcon = document.getElementById("hamburguerIcon");
+    const closeIcon = document.getElementById("closeIcon");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (hamburguerIcon && closeIcon && mobileMenu) {
+      hamburguerIcon.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        hamburguerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      closeIcon.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        hamburguerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
+
 <section
   class="text-sm flex flex-col gap-y-4 md:flex-row justify-between md:px-4 py-6 max-w-[1168px] m-auto"
 >
@@ -28,10 +54,10 @@ const translatePath = useTranslatedPath(lang);
       <img src="/assets/logowhite.webp" alt="Logo" width="40px" height="auto" />
       <h1 class="mt-1">Javier Azagra</h1>
     </div>
-    <div class="md:hidden" id="hamburguerIcon">
+    <div class="md:hidden cursor-pointer" id="hamburguerIcon">
       <Hamburguer />
     </div>
-    <div id="closeIcon" class="hidden">
+    <div id="closeIcon" class="hidden cursor-pointer">
       <Close />
     </div>
   </div>
@@ -77,30 +103,3 @@ const translatePath = useTranslatedPath(lang);
     <LanguageSelector />
   </div>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburguerIcon = document.getElementById("hamburguerIcon");
-    const closeIcon = document.getElementById("closeIcon");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (hamburguerIcon && closeIcon && mobileMenu) {
-      hamburguerIcon.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-        mobileMenu.classList.toggle("flex");
-
-        hamburguerIcon.classList.toggle("hidden");
-        closeIcon.classList.toggle("hidden");
-      });
-
-      closeIcon.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-        mobileMenu.classList.toggle("flex");
-
-        // Alternar de vuelta a hamburguesa
-        hamburguerIcon.classList.toggle("hidden");
-        closeIcon.classList.toggle("hidden");
-      });
-    }
-  });
-</script>
